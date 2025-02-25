@@ -10,7 +10,7 @@ This solution helps VLSI engineers, RTL designers, and EDA tool developers impro
 
 **The approach used to generate the algorithm:**
 
-**Data Collection & Preprocessing:**
+1.**Data Collection & Preprocessing:**
 Generated synthetic RTL data with attributes:
 Fan-In: Number of input connections.
 Fan-Out: Number of output connections.
@@ -19,27 +19,29 @@ Combinational Depth: Ground truth calculated using a formula.
 Standardized data using StandardScaler.
 Encoded categorical features (if any) using LabelEncoder.
 
-**Machine Learning Model Selection:**
+2.**Machine Learning Model Selection:**
 Random Forest Regressor (for faster inference).
 XGBoost Regressor (for higher accuracy).
 Models trained on 80% of the dataset, tested on 20%.
 
-**Training & Evaluation:**
+3.**Training & Evaluation:**
 Loss function: Mean Absolute Error (MAE).
 Model Performance:
 Random Forest MAE: ~3.46
 XGBoost MAE: Lower than RF (~2.5-3.0 expected)
 
-**Deployment & Real-Time Prediction:**
+4.**Deployment & Real-Time Prediction:**
 Saved trained models (rf_model.pkl, xgb_model.pkl).
 Created a function to predict logic depth for new RTL signals.
 
 **Proof of Correctness:**
+
 **User Input:**
 Enter RTL Signal Features 
 Enter Fan-In: 4
 Enter Fan-Out: 2
 Enter Gate Count: 13
+
 **Model Output:**
 Predicted Depth Category: Low
 No Timing Violation Detected.
