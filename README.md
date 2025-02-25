@@ -43,11 +43,16 @@ User inputs circuit parameters and receives instant logic depth estimation
 We validated the AI model using real-time user input and predictions:
 
 **User Input:**
+
 Enter Fan-In: 4
+
 Enter Fan-Out: 2
+
 Enter Gate Count: 13
 
 **Model Output:**
+
 Predicted Depth Category: Low
+
 No Timing Violation Detected.
 
